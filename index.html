@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scranton Paper GTM Opportunity | Powering Growth</title>
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --secondary: #1e293b;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { transition: none !important; animation: none !important; }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: -0.025em;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9));
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subheadline {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Value Props */
+        .section {
+            padding: 8rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .props-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .prop-card {
+            background: var(--bg-card);
+            padding: 3rem 2rem;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+
+        .prop-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .prop-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            color: var(--primary);
+        }
+
+        .prop-card p {
+            color: var(--text-muted);
+        }
+
+        /* Resources */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-card {
+            background: var(--bg-dark);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-card:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: var(--primary);
+        }
+
+        .resource-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .resource-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resource-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--bg-card);
+            padding: 6rem 2rem;
+            text-align: center;
+            border-radius: 2rem;
+            margin: 4rem 2rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .section { padding: 4rem 1.5rem; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">SCRANTON PAPER</a>
+            <div class="nav-links">
+                <a href="#value">Strategy</a>
+                <a href="#resources">Resources</a>
+                <a href="mailto:zach.gilbert@ibm.com">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://kcvygyyvfbkrdtcgzfpl.supabase.co/storage/v1/object/public/microsite-assets/8a48c8a5-fe48-467f-9f52-0adfb8c9f1c0/q1-scranton-proposal/hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Powering Scranton Paper’s Next Chapter of Growth</h1>
+            <p class="subheadline">An Oracle Go-To-Market strategy designed to modernize operations, empower sales, and keep Scranton Paper competitive in a rapidly changing market.</p>
+            <a href="mailto:zach.gilbert@ibm.com" class="btn">Get in touch</a>
+        </div>
+    </section>
+
+    <section id="value" class="section">
+        <div class="section-header">
+            <h2 class="section-title">The Strategy</h2>
+        </div>
+        <div class="props-grid">
+            <div class="prop-card">
+                <h3>Unified GTM Execution</h3>
+                <p>Oracle enables Scranton Paper to align sales, marketing, and operations around a single GTM strategy—reducing friction, improving visibility, and ensuring every team is working toward the same revenue goals.</p>
+            </div>
+            <div class="prop-card">
+                <h3>Data-Driven Performance</h3>
+                <p>By connecting customer, pipeline, and performance data, Oracle gives Scranton Paper real-time insight into what’s working, what’s not, and where to focus—so decisions are based on facts, not gut feelings.</p>
+            </div>
+            <div class="prop-card">
+                <h3>Scalable Growth</h3>
+                <p>Oracle’s GTM platform supports growth without forcing Scranton Paper to lose what makes it successful today—modernizing processes while preserving culture, relationships, and day-to-day operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="section">
+        <div class="section-header">
+            <h2 class="section-title">Key Resources</h2>
+        </div>
+        <div class="resources-grid">
+            <a href="https://kcvygyyvfbkrdtcgzfpl.supabase.co/storage/v1/object/public/microsite-assets/8a48c8a5-fe48-467f-9f52-0adfb8c9f1c0/q1-scranton-proposal/assets/6f978687-33bf-48d4-b47c-c27a6918047b.pptx" target="_blank" class="resource-card" data-asset-id="Untitled">
+                <div>
+                    <span class="resource-category">Faux-PPTX</span>
+                    <h4 class="resource-title">📊 Untitled</h4>
+                    <p class="resource-desc">Pitch Deck</p>
+                </div>
+            </a>
+
+            <a href="https://kcvygyyvfbkrdtcgzfpl.supabase.co/storage/v1/object/public/microsite-assets/8a48c8a5-fe48-467f-9f52-0adfb8c9f1c0/q1-scranton-proposal/assets/9d888f92-9911-45c9-a160-255fac192a74.pdf" target="_blank" class="resource-card" data-asset-id="Faux Proposal">
+                <div>
+                    <span class="resource-category">Proposal / SOW</span>
+                    <h4 class="resource-title">📋 Faux Proposal</h4>
+                    <p class="resource-desc">Comprehensive strategy document</p>
+                </div>
+            </a>
+
+            <a href="https://kcvygyyvfbkrdtcgzfpl.supabase.co/storage/v1/object/public/microsite-assets/8a48c8a5-fe48-467f-9f52-0adfb8c9f1c0/q1-scranton-proposal/assets/906d9b6c-b454-48c5-aad5-2e4e40cf09f7.pdf" target="_blank" class="resource-card" data-asset-id="GTM Whitepaper">
+                <div>
+                    <span class="resource-category">Whitepapers</span>
+                    <h4 class="resource-title">📑 GTM Whitepaper</h4>
+                    <p class="resource-desc">In-depth market insights</p>
+                </div>
+            </a>
+
+            <a href="https://kcvygyyvfbkrdtcgzfpl.supabase.co/storage/v1/object/public/microsite-assets/8a48c8a5-fe48-467f-9f52-0adfb8c9f1c0/q1-scranton-proposal/assets/2221ed73-42bc-41a3-b4ab-df3df923e829.JPG" target="_blank" class="resource-card" data-asset-id="It's me, I'm Zach">
+                <div>
+                    <span class="resource-category">Images</span>
+                    <h4 class="resource-title">🤳 It's me, I'm Zach</h4>
+                    <p class="resource-desc">Get to know the team</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <div class="cta-section">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Begin?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Connect with our team to discuss how Scranton Paper can leverage Oracle's GTM infrastructure for the 2026 fiscal year.</p>
+        <a href="mailto:zach.gilbert@ibm.com" class="btn">Get in touch</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Scranton Paper. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
